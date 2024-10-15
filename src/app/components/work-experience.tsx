@@ -1,4 +1,6 @@
-const activity = [
+import { Subheading } from "./ui/subheading";
+
+const list = [
   {
     id: 1,
     position: "Senior Software Engineer",
@@ -37,15 +39,16 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function WorkExperience() {
+export const WorkExperience = () => {
   return (
     <>
+      <Subheading text="Work Experience" />
       <ul role="list" className="space-y-6">
-        {activity.map((activityItem, activityItemIdx) => (
-          <li key={activityItem.id} className="relative flex gap-x-4">
+        {list.map((listItem, listItemIdx) => (
+          <li key={listItem.id} className="relative flex gap-x-4">
             <div
               className={classNames(
-                activityItemIdx === activity.length - 1 ? "h-6" : "-bottom-6",
+                listItemIdx === list.length - 1 ? "h-6" : "-bottom-6",
                 "absolute left-0 top-0 flex w-6 justify-center"
               )}
             >
@@ -60,7 +63,7 @@ export default function WorkExperience() {
                 <div
                   className={`h-1.5 w-1.5 rounded-full bg-gray-100 ring-1 ring-gray-300
                     ${
-                      activityItemIdx === 0
+                      listItemIdx === 0
                         ? "animate-pulse ring-green-400 bg-green-400"
                         : ""
                     }
@@ -69,18 +72,16 @@ export default function WorkExperience() {
               </div>
               <p className="flex-auto py-0.5 text-sm leading-5">
                 <div className="flex flex-col">
-                  <span className="font-medium">{activityItem.position}</span>
-                  <span className="font-medium">
-                    {activityItem.companyName}
-                  </span>
-                  <p className="text-gray-500">{activityItem.description}</p>
+                  <span className="font-medium">{listItem.position}</span>
+                  <span className="font-medium">{listItem.companyName}</span>
+                  <p className="text-gray-500">{listItem.description}</p>
                 </div>
               </p>
               <time
-                dateTime={activityItem.dateTime}
+                dateTime={listItem.dateTime}
                 className="flex-none py-0.5 text-xs leading-5 text-gray-500"
               >
-                {activityItem.date}
+                {listItem.date}
               </time>
             </>
           </li>
@@ -88,4 +89,4 @@ export default function WorkExperience() {
       </ul>
     </>
   );
-}
+};
