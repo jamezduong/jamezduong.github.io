@@ -12,8 +12,8 @@ const links = [
     ),
   },
   {
-    text: "jpduong",
-    href: "https://github.com/jpduong",
+    text: "jamezduong",
+    href: "https://github.com/jamezduong",
     icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
