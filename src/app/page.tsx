@@ -1,6 +1,7 @@
 import WorkExperience from "./components/work-experience";
 import { Section } from "./components/ui/section";
 import { Subheading } from "./components/ui/subheading";
+import { SVGProps } from "react";
 
 const items = [
   {
@@ -15,7 +16,7 @@ const links = [
   {
     text: "james-duong-9168a89a",
     href: "https://www.linkedin.com/in/james-duong-9168a89a/",
-    icon: (props) => (
+    icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 19.75h-2.5v-9.5h2.5v9.5zm-1.25-10.75h-.03c-.83 0-1.37-.55-1.37-1.24 0-.7.55-1.25 1.4-1.25.83 0 1.37.55 1.37 1.25-.01.69-.54 1.24-1.37 1.24zm13.25 10.75h-2.5v-4.98c0-1.25-.44-2.1-1.56-2.1-.85 0-1.36.57-1.58 1.12-.08.19-.1.45-.1.71v5.25h-2.5v-9.5h2.5v1.3c.33-.51.93-1.24 2.27-1.24 1.66 0 2.91 1.08 2.91 3.39v6.05z" />
       </svg>
@@ -24,7 +25,7 @@ const links = [
   {
     text: "jpduong",
     href: "https://github.com/jpduong",
-    icon: (props) => (
+    icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
           fillRule="evenodd"
@@ -37,7 +38,7 @@ const links = [
   {
     text: "jamesduong",
     href: "https://www.instagram.com/jamesduong/",
-    icon: (props) => (
+    icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
           fillRule="evenodd"
