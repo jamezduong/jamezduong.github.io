@@ -56,7 +56,7 @@ export const Socials = () => {
   return (
     <>
       <Subheading text="Socials" />
-      <div className="flex gap-x-2">
+      <div className="flex flex-wrap gap-2">
         {links.map((link) => (
           <a
             key={link.text}
