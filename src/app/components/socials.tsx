@@ -1,4 +1,5 @@
 import { SVGProps } from "react";
+import { FadeIn, FadeInStagger } from "./FadeIn";
 import { Subheading } from "./ui/subheading";
 
 const links = [
@@ -56,19 +57,25 @@ export const Socials = () => {
   return (
     <>
       <Subheading text="Socials" />
-      <div className="flex flex-wrap gap-2">
-        {links.map((link) => (
-          <a
-            key={link.text}
-            className="p-2 px-4 bg-gray-100 rounded text-xs flex items-center gap-x-2 border border-gray-200"
-            href={link.href}
-            target="_blank"
-          >
-            {link.icon && <link.icon aria-hidden="true" className="h-5 w-5" />}
-            {link.text}
-          </a>
-        ))}
-      </div>
+      <FadeInStagger>
+        <div className="flex flex-wrap gap-2">
+          {links.map((link) => (
+            <FadeIn key={link.text}>
+              <a
+                key={link.text}
+                className="p-2 px-4 bg-gray-100 rounded text-xs flex items-center gap-x-2 border border-gray-200"
+                href={link.href}
+                target="_blank"
+              >
+                {link.icon && (
+                  <link.icon aria-hidden="true" className="h-5 w-5" />
+                )}
+                {link.text}
+              </a>
+            </FadeIn>
+          ))}
+        </div>
+      </FadeInStagger>
     </>
   );
 };
